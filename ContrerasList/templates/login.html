@@ -1,0 +1,226 @@
+<html>
+<head>
+    <title>Log in</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+*
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+               body {
+  background-image: url(img/bg.jpg) ;
+  background-color: #7EEA90;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+
+ }
+              body {
+  font-family: Century Gothic;
+ }
+
+h1 { 
+margin: 10px;
+background-color:  #592d86;
+font-style: italic;
+color: #ff7547 ;
+font-size: 23px;
+padding-top: 20px;
+padding-bottom: 10px;
+padding-left: 30px;
+border-radius: 5px;
+        }
+
+header
+{
+position: absolute ;
+top: 25px;
+width: 100%;
+font-size: 14px;
+padding-left: 90%;
+
+}
+
+ header ul li
+ {
+
+display: inline-block;
+ }
+
+ header li a
+ {
+color: white;
+text-decoration: none;
+font-weight: bolder;
+padding-left: 15px;
+
+ }
+	         p { 
+font-size: 25px;
+color: black; 
+}
+ .login
+ {
+  background-color: rgba(00,00,00,0.4);
+  height:300px;
+  width: 300px;
+margin: auto;
+text-align: center;
+padding: 10px;
+color: white;
+border-radius: 10px;
+margin-top: 100px;
+
+ }  
+ input
+ {
+  background-color:rgb(00,00,00,00);
+  border: none;
+  border-bottom: solid white 1px;
+  line-height: 40px;
+width:200px;
+color: white;
+ }   
+ button { 
+        background-color: #ae5bd7; 
+        width: 15%;
+        height: 3%;
+        color: black; 
+        font-weight: bolder; 
+        cursor: pointer;
+        margin-left: 500px;
+        border-color:  #6b2390;
+} 
+
+button:hover { 
+        opacity: 0.7; 
+} 
+ .register
+ {
+  color: orange;
+  text-decoration:none;
+ }  
+ h2
+ {
+  color: orange;
+ } 
+ form {
+border-radius: 5px;
+  background-color: #cc98e6;
+  padding: 20px;
+
+
+}
+
+input[type=text], [type=int], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-color:  #6b2390;
+
+}
+
+footer
+{
+  background-color: rgb(00,00,00,0.6);
+  margin-top: 80px;
+}
+ footer ul li
+ {
+display: inline-block;
+padding: 50px;
+margin-left: 25px;
+
+ }
+ footer li a
+ {
+
+padding-left: 50px;
+color: orange;
+text-decoration: none;
+font-weight: bolder;
+
+ }
+ footer .contacts i
+ {
+  font-size: 30px;
+  color: orange;
+  padding: 5px;
+  position: relative;
+  left: 410px;
+  bottom: 40px;
+ }
+</style>
+</head>
+
+
+
+<body  text= "black" ; >
+ <legend alin = "RightCorner" ><h1 align = "RightCorner"> <b> Salawag Scholarship Subsidy </b></h1></legend></fieldset> 
+      <br><br><br><br><br>
+ 
+ <header>
+    <ul>
+        <li>
+<a href="/Home"> HOME </a></li>
+
+
+        </li>
+    </ul>
+</header>
+
+<div>
+<form method="POST" action="/applicant_page">
+
+<label for="Usersname">Username:</label><br>  
+<input type="text" id="Usersname" name="Usersname" placeholder="Enter Username"><br><br>
+ <! -- Password field -->
+<label for="Passwords">Password:</label><br>
+<input type="password" id="Passwords" name="Passwords" placeholder="Enter Password"><br><br>
+<! -- An element to toggle between password visibility -->
+
+<input type="checkbox" onclick="myFunction()">Show Password
+
+    <script>
+function myFunction() {
+  var x = document.getElementById("Passwords");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+  <button type="submit" id="rbtnsubmit" >SUBMIT</button>
+
+  {% csrf_token %}
+</form>
+</div>
+
+</body>
+
+<br><br><br><br><br>
+
+<footer>
+  <ul>
+    <li> 
+ <a href="aboutus.html"> ABOUT US</a></li>
+ <li><a href="contact.html">CONTACT</a></li>
+ <li><a href="terms.html">TERMS & CONDITION</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+  </ul>
+  <div class="contacts">
+    <i class="fa fa-facebook-square"></i>
+    <i class="fa fa-phone-square"></i>
+    <i class="fa fa-envelope"></i>
+</div>
+</footer>
+</body>
+</html>

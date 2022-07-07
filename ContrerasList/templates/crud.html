@@ -1,0 +1,84 @@
+<html>
+<head>
+<body>
+<title> CITY of DASMARINAS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*
+body {
+        background-image: url(/static/images/bg.jpg) ;
+        background-color: #7EEA90;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        border-radius: 100px;
+}
+h1 { 
+background-color:  #592d86;
+font-style: italic;
+color: #ff7547 ;
+font-size: 23px;
+padding-top: 20px;
+padding-bottom: 10px;
+padding-left: 30px;
+border-radius: 5px;
+        }
+h4 {
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 50px;
+}
+
+form {
+border-radius: 5px;
+  background-color: #cc98e6;
+  padding: 20px;
+
+
+}
+
+input[type=text], [type=int], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-color:  #6b2390;
+
+}
+button { 
+        background-color: #00008B; 
+        width: 15%;
+        color: #ffff66;  
+        cursor: pointer;
+        margin-left: 500px;
+} 
+
+button:hover { 
+        opacity: 0.7; 
+} 
+
+</style>
+<body>
+    <legend alin = "RightCorner" ><h1 align = "RightCorner"> <b> Salawag Scholarship Subsidy </b></h1></legend></fieldset>
+
+<h4> "Please, Update Applicant Status!"</h4>
+
+	<form method="POST" action="update/{{ applicants.id }}">
+
+{% csrf_token %}
+
+<br><br>
+
+    <label for="stats"></label>
+    <input required type="text" id="stats" name="stats" placeholder="APPLICATION STATUS" value="{{ applicant.sstatus }}" size="33"> <br><br>
+
+
+        <button type="submit" id="rbtnsubmit">Submit</button>
+</form>
+</body>
+</body>
+</html>

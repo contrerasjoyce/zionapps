@@ -1,0 +1,120 @@
+<html>
+<head>
+<body>
+
+<style>
+*
+body {
+
+        background-image: url(/static/images/bg.jpg) ;
+        background-color: #7EEA90;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        border-radius: 100px;
+}
+h1 { 
+background-color:  #592d86;
+font-style: italic;
+color: #ff7547 ;
+font-size: 23px;
+padding-top: 20px;
+padding-bottom: 10px;
+padding-left: 30px;
+border-radius: 5px;
+        }
+header
+{
+position: absolute ;
+top: 25px;
+width: 100%;
+font-size: 14px;
+padding-left: 800px;
+
+}
+
+ header ul li
+ {
+
+display: inline-block;
+ }
+
+ header li a
+ {
+color: white;
+text-decoration: none;
+font-weight: bolder;
+padding-left: 15px;
+
+ }
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #cc98e6;
+  color: black;
+  
+   font-family: Lucida Handwriting, serif;
+  font-size: 15px;
+}
+</style>
+
+<body>
+ <legend alin = "RightCorner" ><h1 align = "RightCorner"> <b> Salawag Scholarship Subsidy </b></h1></legend></fieldset>
+
+<header>
+    <ul>
+        <li>
+<a href="/AdminHome"> HOME </a></li>
+</ul>
+</header>
+
+<table id="ziontable" name='tr'>
+    
+      <tr>   
+                <th>NAME</th>
+                <th>ADDRESS</th>
+                <th>AGE</th>
+                <th>GENDER</th>
+                <th>CONTACT NO.</th>
+                <th>EMAIL ADD</th>
+                <th>GUARDIAN NAME</th>
+                <th>OCCUPATION</th>
+                <th>INCOME</th>
+                <th>USER NAME</th>
+                <th>PASSWORD</th>
+                <th>STATUS</th>
+
+      </tr> {% for applicant in applicants %} 
+      <tr>
+                <! -- {{ forloop.counter }}: -- >
+                <td>{{forloop.counter}}:
+<a href=/{{applicant.id}}/applicant_view>{{applicant.nFullName}}</a></td>
+                <td>{{applicant.nAddress}}</td>
+                <td>{{applicant.aage}}</td>
+                <td>{{applicant.nGenders}}</td> 
+                <td>{{applicant.acontumber}}</td>
+                <td>{{applicant.aemailAddress}}</td>
+                <td>{{applicant.agname}}</td>
+                <td>{{applicant.asoi}}</td>
+                <td>{{applicant.nAIncome}}</td>
+                <td>{{applicant.ausername}}</td>
+                <td>{{applicant.apassword}}</td>
+                <td>{{applicant.sstatus}}</td>
+                <td><a href="edit/{{applicant.id}}">EDIT</a></td>
+                
+      </tr> {% endfor %}
+
+</table>
+</body>
+</body>
+</head>
+</html>

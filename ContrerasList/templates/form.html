@@ -1,0 +1,200 @@
+<html>
+<head>
+<body>
+<title> CITY of DASMARINAS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*
+body {
+        
+        background-color: #7EEA90;
+        background-size: cover;
+        background-attachment: fixed;
+        border-radius: 100px;
+}
+
+
+h1 { 
+background-color:  #592d86;
+font-style: italic;
+color: #ff7547 ;
+font-size: 23px;
+padding-top: 20px;
+padding-bottom: 10px;
+padding-left: 30px;
+border-radius: 5px;
+        }
+
+p.a {
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+  word-spacing: normal;
+  word-spacing: 15px;
+  letter-spacing: 1cm;
+  border-radius: 5px;
+}
+
+
+
+button { 
+        background-color: #ae5bd7; 
+        width: 15%;
+        height: 3%;
+        color: black; 
+        font-weight: bolder; 
+        cursor: pointer;
+        margin-left: 550px;
+        border-color:  #6b2390;
+} 
+
+button:hover { 
+        opacity: 0.7; 
+} 
+header
+{
+position: absolute ;
+top: 25px;
+width: 100%;
+font-size: 14px;
+padding-left: 830px;
+
+}
+
+ header ul li
+ {
+
+display: inline-block;
+ }
+
+ header li a
+ {
+color: white;
+text-decoration: none;
+font-weight: bolder;
+padding-left: 15px;
+
+ }
+
+.next {
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-style: italic;
+    width: 60px;
+    color: darkorange;  
+    cursor: pointer;
+    margin-left: 790px;
+}
+.next :hover { 
+        opacity: 0.7; 
+    }
+
+form {
+border-radius: 5px;
+  background-color: #cc98e6;
+  padding: 20px;
+
+
+}
+
+input[type=text], [type=int], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-color:  #6b2390;
+
+}
+
+</style>
+  
+     
+<body  text= "black" ; >
+ <legend alin = "RightCorner" ><h1 align = "RightCorner"> <b> Salawag Scholarship Subsidy </b></h1></legend></fieldset> 
+      <br>
+
+ <header>
+    <ul>
+        <li>
+<a href="Home"> HOME </a></li>
+<li><a href="#Guide">GUIDE</a></li>
+<li><a href="require"> REQUIREMENTS</a></li>
+<li><a href="Offered"> | LOG IN</a></li>
+        </li>
+    </ul>
+</header>
+
+
+<p class="a">-APPLICANT INFORMATION-</p> <br><br>
+
+<form method="POST" action="/new"> 
+<br><br>
+    <label for="CompleteName"> </label>
+        <input required type="text" id="CompleteName" name="CompleteName" placeholder="NAME OF APPLICANT"  size="37"> <br><br>
+
+    <label  for="Address"></label>
+        <input required type="text" id="Address" name="Address" placeholder="COMPLETE HOME ADDRESS"   size="31"> <br><br>
+
+    <label for="Aage"> </label>
+    <input required type="int" id="Aage" name="Aage" placeholder="AGE" > <br> <br>
+        <label for="Gender"></label>
+    <select id="Gender" name="Gender"> 
+        <option value="female"> FEMALE </option> <option id="male"> MALE</option> </select> <br><br>
+
+    <label for="Cnumber"> </label>
+    <input required type="int" id="Cnumber" name="Cnumber" placeholder="Contact Number" > <br> <br>
+
+    <label for="EmailAdd"> </label>
+        <input required type="text" id="EmailAdd" name="EmailAdd" placeholder="EMAIL ADDRESS"   size="28"> <br><br>
+
+    <label for="GName"> </label>
+        <input required type="text" id="GName" name="GName" placeholder="GUARDIAN's NAME" size="29"> <br><br>
+
+    <label for="Occupation"> </label>
+        <input required type="text" id="Occupation" name="Occupation" placeholder="GUARDIAN's OCCUPATION" size="29"> <br><br>
+
+    <label for="Annual Income"> </label>
+    <input required type="int" id="Annual Income" name="Annual Income" placeholder="ANNUAL INCOME" > <br> <br>
+
+    <label for="Usersname"> </label>
+    <input required type="text" id="Usersname" name="Usersname" placeholder="USER NAME" > <br> <br>
+
+    <! -- Password field -->
+    <label for="Passwords"> </label>
+    <input required type="password" id="Passwords" name="Passwords" placeholder="PASSWORD" > <br> <br>
+    <! -- An element to toggle between password visibility -->
+
+    <input type="checkbox" onclick="myFunction()">Show Password
+
+
+    <script>
+function myFunction() {
+  var x = document.getElementById("Passwords");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+
+    <label for="stats"> </label>
+        <input required type="text" id="stats" name="stats" placeholder="APPLICANT STATUS" size="29"> <br><br>
+        
+     <button type="submit" id="rbtnsubmit" >SUBMIT</button>
+
+{% csrf_token %}
+</form>
+
+</body>
+</body>
+</head>
+</html>

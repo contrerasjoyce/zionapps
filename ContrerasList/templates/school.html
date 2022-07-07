@@ -1,0 +1,203 @@
+<html>
+<head>
+<body>
+<title> CITY of DASMARINAS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*
+body {
+        background-image: url(/static/images/bg1.jpg) ;
+        background-color: #7EEA90;
+        background-repeat:repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        border-radius: 100px;
+}
+
+
+h1 { 
+background-color:  #592d86;
+font-style: italic;
+color: #ff7547 ;
+font-size: 23px;
+padding-top: 20px;
+padding-bottom: 10px;
+padding-left: 30px;
+border-radius: 5px;
+        }
+
+
+h2{  
+        color: black;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+}
+  
+
+header
+{
+position: absolute ;
+top: 25px;
+width: 100%;
+font-size: 14px;
+padding-left: 750px;
+
+}
+
+ header ul li
+ {
+
+display: inline-block;
+ }
+
+ header li a
+ {
+color: white;
+text-decoration: none;
+font-weight: bolder;
+padding-left: 15px;
+
+ }
+
+form {
+border-radius: 5px;
+  background-color: #cc98e6;
+  padding: 20px;
+
+
+}
+
+input[type=text], [type=int], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-color:  #6b2390;
+
+}
+button { 
+        background-color: #00008B; 
+        width: 15%;
+        color: #ffff66;  
+        cursor: pointer;
+        margin-left: 200px;
+} 
+
+button:hover { 
+        opacity: 0.7; 
+} 
+form a {
+        color:  white;
+        background-color:   #00008B;
+        border-radius: 5px;
+        padding: 5px;
+        margin-left: 210px;
+    }
+    .back {
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-style: italic;
+    width: 60px;
+    color: darkorange;  
+    cursor: pointer;
+    margin-left: 350px;
+}
+.back :hover { 
+        opacity: 0.7; 
+    }
+
+table
+
+{
+        text-align: left;
+        height: 100px;
+}
+
+table tr
+{
+        display: inline-block;
+        padding: 100px;
+        padding-top: 100px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: : 50px;
+
+  
+}
+
+table tr th
+{
+        height: 35px;
+        width: 160px;
+        padding-left: 50px;
+        font-size: 15px;
+        font-family: century gothic;
+        color: black;
+        border: 1px solid;
+        background-color: rgb(00,00,00,0.2);
+}
+table tr td
+{
+        display: inline-block;
+        padding: 20px;
+        padding-left: 50px;
+        height: : 20px;
+        width: 150px;
+        font-size: 15px;
+        font-family: century gothic;
+        color: darkblue;
+        border: 1px solid;
+        background-color:whitesmoke ;
+}
+</style>
+
+<body  text= "black" ; >
+ <legend alin = "RightCorner" ><h1 align = "RightCorner"> <b> Salawag Scholarship Subsidy </b></h1></legend></fieldset> 
+      <br>
+
+ <header>
+    <ul>
+        <li>
+<a href="/Home"> HOME </a></li>
+<li><a href="#Guide">GUIDE</a></li>
+<li><a href="/require"> REQUIREMENTS</a></li>
+<li><a href="/Offered"> | LOG IN</a></li>
+        </li>
+    </ul>
+</header>
+ <h2> ADDITIONAL INFORMATION </h2>
+
+<form method="POST" action="/{{applicant.id}}/add_applicant">
+<br><br>
+        <label for="School"> </label> 
+        <input required type="text" id="School" name="School" placeholder="SCHOOL NAME" size="31"> <br><br>
+        <label for="GradeLevel">  </label>
+        <input required type="text" id="GradeLevel" name="GradeLevel" placeholder="YEAR LEVEL" size="31"> <br><br>
+        <label for="StudsId"> </label>
+        <input required type="text" id="StudsId" name="StudsId" placeholder="STUDENT NO." size="31"> <br><br>
+        <label for="GPA"> </label>
+        <input required type="text" id="GPA" name="GPA" placeholder="GENERAL PERCENTAGE AVERAGE" size="31"> <br><br>
+        
+        <label for="img">STUDENT ID:</label>
+        <input required type="file" id="img" name="img" accept="image/*"> <br><br>
+        <label for="img1">CLASS CARD:</label>
+        <input required type="file" id="img1" name="img1" accept="image/*"> <br><br>
+
+
+
+    <button type="submit" id="rbtnsubmit">Submit</button>
+
+    <!--  <a href= "/ContrerasList/Message" id="rbtnsubmit" >submit</a> -->
+
+{% csrf_token %}
+
+ </form>
+</body>
+</head>
+</html>
